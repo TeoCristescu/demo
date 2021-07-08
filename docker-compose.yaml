@@ -73,8 +73,6 @@ services:
     build:
       context: shipping
     image: ${REPO}/rs-shipping:${TAG}
-    depends_on:
-      - mysql
     networks:
       - robot-shop
     healthcheck:
@@ -92,8 +90,6 @@ services:
       APP_ENV: prod
     networks:
       - robot-shop
-    depends_on:
-      - mysql
     healthcheck:
       test: ["CMD", "curl", "-H", "X-INSTANA-SYNTHETIC: 1", "-f", "http://localhost/_health"]
       interval: 10s
