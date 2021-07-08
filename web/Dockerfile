@@ -19,7 +19,7 @@ RUN if [ -n "$KEY" ]; then curl \
 
 FROM nginx:1.20.1
 
-EXPOSE 8080
+EXPOSE 8085
 
 ENV CATALOGUE_HOST=catalogue \
     USER_HOST=user \
