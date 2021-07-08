@@ -69,16 +69,6 @@ services:
       retries: 3
     logging:
       <<: *logging
-  mysql:
-    build:
-      context: mysql
-    image: ${REPO}/rs-mysql-db:${TAG}
-    cap_add:
-      - NET_ADMIN
-    networks:
-      - robot-shop
-    logging:
-      <<: *logging
   shipping:
     build:
       context: shipping
